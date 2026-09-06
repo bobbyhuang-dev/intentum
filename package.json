@@ -1,0 +1,18 @@
+{
+  "name": "@bobbyhuang-dev/intentum",
+  "version": "0.1.0-dev.0",
+  "description": "A lightweight, customized Pi coding agent",
+  "type": "module",
+  "license": "UNLICENSED",
+  "repository": { "type": "git", "url": "https://github.com/bobbyhuang-dev/intentum.git" },
+  "engines": { "node": ">=22.19.0" },
+  "bin": { "intentum": "bin/intentum.mjs", "intentum-install": "scripts/install.mjs" },
+  "files": ["bin/", "src/", "scripts/install.mjs", "docs/distribution.md", "npm-shrinkwrap.json"],
+  "scripts": {
+    "start": "node bin/intentum.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:install": "node --test test/integration/*.test.mjs",
+    "install:local": "node scripts/install-local.mjs"
+  },
+  "dependencies": { "@earendil-works/pi-coding-agent": "0.85.1" }
+}
